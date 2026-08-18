@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0B09;
+  color: #ECEDE9;
+}
+
+/* Visible focus states, kept subtle but real */
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid #8AA05F;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-jetbrains);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.7rem;
+  color: #8AA05F;
+}
+
+.silver-text {
+  background: linear-gradient(
+    100deg,
+    #7f847c 0%,
+    #f2f3f0 22%,
+    #cfd2c9 34%,
+    #8a8f87 48%,
+    #f2f3f0 62%,
+    #9ba098 78%,
+    #f2f3f0 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.silver-text-static {
+  background: linear-gradient(105deg, #9ba098 0%, #f2f3f0 30%, #cfd2c9 50%, #8a8f87 70%, #eceeeb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.blueprint-bg {
+  background-image:
+    linear-gradient(rgba(232, 233, 230, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 233, 230, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: center top;
+}
+
+.vignette {
+  background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(62, 74, 46, 0.16), transparent 60%);
+}
+
+.card-hairline {
+  border: 1px solid rgba(232, 233, 230, 0.1);
+}
+
+.draw-line {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+}
