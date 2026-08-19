@@ -29,30 +29,31 @@ const pillars = [
 
 export default function Pillars() {
   return (
-    <section id="pilares" className="relative py-28 md:py-36 border-t border-line">
+    <section id="pilares" className="section-base section-padding border-t border-line scroll-mt-20">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="max-w-2xl mb-16 md:mb-20 reveal">
-          <p className="eyebrow mb-4">Diferencial</p>
-          <h2 className="font-display font-medium text-3xl md:text-4xl text-silver-100 leading-tight">
-            Más que una web. Entiendo el sistema detrás de tu negocio.
+        <div className="max-w-2xl section-heading reveal">
+          <p className="eyebrow mb-3">Diferencial</p>
+          <h2 className="font-display font-semibold text-3xl md:text-[2.6rem] text-silver-100 leading-[1.08] tracking-tight">
+            Más que una web.{" "}
+            <span className="heading-accent">
+              Entiendo el sistema detrás de tu negocio.
+            </span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-line">
-          {pillars.map((p) => (
+        <div className="grid md:grid-cols-3 gap-4">
+          {pillars.map((p, i) => (
             <div
               key={p.title}
-              className="bg-bg p-8 md:p-10 flex flex-col gap-6 hover:bg-surface transition-colors reveal"
+              className={`card-glass card-glow rounded-2xl p-6 md:p-7 flex flex-col gap-5 reveal reveal-delay-${i + 1}`}
             >
-              <svg
-                viewBox="0 0 48 48"
-                className="w-10 h-10 text-military-500"
-                fill="none"
-              >
-                {p.glyph}
-              </svg>
+              <div className="icon-ring">
+                <svg viewBox="0 0 48 48" className="w-5 h-5" fill="none" aria-hidden="true">
+                  {p.glyph}
+                </svg>
+              </div>
               <div>
-                <h3 className="font-display text-xl text-silver-100 mb-3">
+                <h3 className="font-display text-lg md:text-xl font-medium text-silver-100 mb-2">
                   {p.title}
                 </h3>
                 <p className="font-body text-sm text-ink-400 leading-relaxed">
@@ -63,6 +64,8 @@ export default function Pillars() {
           ))}
         </div>
       </div>
+
+      <div className="section-divider mx-auto max-w-7xl mt-12 md:mt-14" />
     </section>
   );
 }

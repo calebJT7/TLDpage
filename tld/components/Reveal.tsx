@@ -32,7 +32,7 @@ export default function Reveal({
       { threshold: 0.15 }
     );
 
-    element.classList.add("visible");
+    element.classList.remove("visible");
     observer.observe(element);
 
     return () => observer.disconnect();

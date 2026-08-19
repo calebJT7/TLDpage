@@ -1,3 +1,5 @@
+import StructureMark from "@/components/StructureMark";
+
 const stats = [
   { value: "+2", label: "clientes" },
   { value: "+2 años", label: "programando" },
@@ -8,126 +10,153 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      className="relative min-h-[100svh] flex items-center pt-16 overflow-hidden scroll-mt-0"
     >
-      <div className="absolute inset-0 blueprint-bg vignette" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bg" />
+      {/* Background layers */}
+      <div className="absolute inset-0 blueprint-bg-strong" />
+      <div className="absolute inset-0 vignette" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg/20 to-bg" />
 
-      <div className="relative mx-auto max-w-7xl w-full px-6 md:px-10 py-20 grid md:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
-        <div className="reveal animate-fade-up">
-          <p className="eyebrow mb-6">Caleb Toledo · Full Stack Developer</p>
+      {/* Ambient orbs */}
+      <div
+        data-parallax="0.12"
+        className="hero-orb w-[420px] h-[420px] -top-24 -left-24 bg-military-700/30 animate-float-slow"
+      />
+      <div
+        data-parallax="0.08"
+        className="hero-orb w-[320px] h-[320px] top-1/3 -right-32 bg-military-500/20 animate-float"
+        style={{ animationDelay: "-2s" }}
+      />
+      <div
+        data-parallax="0.05"
+        className="hero-orb w-[200px] h-[200px] bottom-20 left-1/3 bg-military-400/10"
+      />
 
-          <h1 className="font-display font-medium text-4xl sm:text-5xl lg:text-6xl leading-[0.96] text-silver-100">
+      <div className="relative mx-auto max-w-7xl w-full px-6 md:px-10 py-10 md:py-14 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center">
+        {/* Left — copy */}
+        <div className="animate-fade-up">
+          <div className="eyebrow-pill mb-6">
+            Full Stack Developer · Disponible
+          </div>
+
+          <h1 className="font-display font-semibold text-[clamp(2.75rem,7vw,5.5rem)] leading-[0.92] tracking-tight text-silver-100">
             CALEB
-            <span className="block silver-text bg-clip-text animate-shimmer">
+            <span className="block silver-text animate-shimmer mt-1">
               TOLEDO
             </span>
           </h1>
 
-          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm font-body text-ink-300">
-            <span className="rounded-full border border-line bg-surface/60 px-3 py-1.5">
-              Full Stack Developer
-            </span>
-            <span className="rounded-full border border-line bg-surface/60 px-3 py-1.5">
-              Córdoba, Argentina
-            </span>
-            <span className="rounded-full border border-line bg-surface/60 px-3 py-1.5">
-              Remote / Worldwide
-            </span>
-          </div>
-
-          <p className="mt-8 max-w-xl font-body text-base md:text-lg text-ink-400 leading-relaxed">
+          <p className="mt-5 max-w-lg font-body text-base md:text-lg text-ink-300 leading-relaxed">
             Desarrollo sitios web, aplicaciones y sistemas a medida para negocios que
-            necesitan soluciones digitales claras, funcionales y preparadas para crecer.
+            necesitan soluciones digitales{" "}
+            <span className="text-silver-100">claras, funcionales</span> y preparadas
+            para crecer.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#proyectos"
-              className="inline-flex items-center gap-2 border border-line-strong text-ink-100 px-7 py-3.5 text-sm font-body hover:border-silver-500 transition-colors"
-            >
-              Ver proyectos
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <a href="#contacto" className="btn-primary">
+              Hablemos de tu proyecto
             </a>
-            <a
-              href="https://calebjt7.github.io/portafolio/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-ink-400 px-1 py-3 text-sm font-body hover:text-silver-100 transition-colors"
-            >
-              Portfolio
+            <a href="#proyectos" className="btn-secondary">
+              Ver proyectos
             </a>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-3 max-w-lg">
-            {stats.map((stat) => (
+          <div className="mt-9 grid grid-cols-3 gap-2.5 max-w-md">
+            {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className="rounded-md border border-line bg-surface/60 px-4 py-4"
+                className={`stat-card rounded-xl px-3.5 py-3.5 md:px-4 md:py-4 reveal reveal-delay-${i + 1}`}
               >
-                <div className="font-display text-2xl text-silver-100">
+                <div className="font-display text-xl md:text-2xl text-silver-100">
                   {stat.value}
                 </div>
-                <div className="mt-2 text-[10px] uppercase tracking-[0.18em] text-ink-500">
+                <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-ink-500">
                   {stat.label}
                 </div>
               </div>
             ))}
           </div>
+
+          <div className="mt-6 flex flex-wrap gap-2 text-xs font-body text-ink-500">
+            <span className="tag-pill">Córdoba, Argentina</span>
+            <span className="tag-pill">Remote / Worldwide</span>
+          </div>
         </div>
 
-        <div className="relative aspect-square max-w-md mx-auto w-full opacity-90 reveal">
-          <div className="absolute inset-0 rounded-[28px] border border-line bg-surface/50 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
-            <div className="flex h-full flex-col justify-between rounded-[24px] border border-line bg-bg/70 p-6">
-              <div className="flex items-center justify-between">
-                <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-transparent">
+        {/* Right — profile card */}
+        <div className="relative max-w-md mx-auto w-full reveal reveal-delay-2">
+          {/* Decorative structure mark */}
+          <div className="absolute -inset-8 opacity-[0.07] pointer-events-none animate-float-slow">
+            <StructureMark />
+          </div>
+
+          {/* Glow behind card */}
+          <div className="absolute inset-4 rounded-[32px] bg-military-500/10 blur-2xl" />
+
+          <div className="relative card-glow rounded-[28px] p-[1px] bg-gradient-to-br from-military-400/40 via-line to-military-700/30 shadow-glow-lg">
+            <div className="rounded-[27px] bg-surface/90 backdrop-blur-xl p-5 md:p-6 h-full">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full ring-1 ring-military-500/30 bg-military-950/60">
                   <img
                     src="/logotld.png"
                     alt="Logo Caleb Toledo"
-                    className="h-full w-full object-contain bg-transparent"
+                    className="h-8 w-8 object-contain"
                   />
                 </div>
-                <span className="rounded-full border border-line px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-ink-400">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-military-500/40 bg-military-950/80 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-military-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-military-400 animate-pulse-glow" />
                   disponible
                 </span>
               </div>
 
               <div className="space-y-5">
                 <div>
-                  <p className="eyebrow text-[8px]">Especialidad</p>
-                  <h2 className="mt-3 font-display text-2xl text-silver-100">
-                    Soluciones web para negocios
+                  <p className="eyebrow text-[8px] mb-2">Especialidad</p>
+                  <h2 className="font-display text-2xl md:text-[1.65rem] text-silver-100 leading-tight">
+                    Soluciones web
+                    <span className="block text-green-glow text-military-400">para negocios</span>
                   </h2>
                 </div>
 
-                <div className="grid gap-3 text-sm text-ink-300">
-                  <div className="flex items-center justify-between border-b border-line pb-2">
-                    <span>Frontend</span>
-                    <span className="text-military-400">Next.js</span>
-                  </div>
-                  <div className="flex items-center justify-between border-b border-line pb-2">
-                    <span>Backend</span>
-                    <span className="text-military-400">Node / C#</span>
-                  </div>
-                  <div className="flex items-center justify-between border-b border-line pb-2">
-                    <span>Base de datos</span>
-                    <span className="text-military-400">SQL / NoSQL</span>
-                  </div>
+                <div className="rounded-xl border border-line bg-bg/60 p-4 space-y-3">
+                  {[
+                    { label: "Frontend", value: "Next.js" },
+                    { label: "Backend", value: "Node / C#" },
+                    { label: "Base de datos", value: "SQL / NoSQL" },
+                  ].map((row) => (
+                    <div
+                      key={row.label}
+                      className="flex items-center justify-between text-sm group/row"
+                    >
+                      <span className="text-ink-400 group-hover/row:text-ink-300 transition-colors">
+                        {row.label}
+                      </span>
+                      <span className="font-mono text-xs text-military-400 bg-military-950/60 px-2 py-0.5 rounded border border-military-700/40">
+                        {row.value}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center justify-between border-t border-line pt-4 text-xs uppercase tracking-[0.2em] text-ink-500">
-                <span>Disponible</span>
-                <span>Global</span>
+              <div className="mt-5 flex items-center justify-between border-t border-line pt-4 text-[10px] uppercase tracking-[0.2em] text-ink-500">
+                <span>Disponible ahora</span>
+                <span className="text-military-400">Global</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink-600">
+      <a
+        href="#pilares"
+        aria-label="Ir a la siguiente sección"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink-600 hover:text-military-400 transition-colors group"
+      >
         <span className="eyebrow text-[9px]">Scroll</span>
-        <span className="w-px h-10 bg-line-strong" />
-      </div>
+        <span className="w-px h-10 bg-gradient-to-b from-military-400/60 to-transparent group-hover:from-military-400 transition-colors" />
+      </a>
     </section>
   );
 }

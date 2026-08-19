@@ -13,29 +13,29 @@ const metrics = [
 
 export default function Scale() {
   return (
-    <section id="escala" className="relative py-28 md:py-36 border-t border-line overflow-hidden">
+    <section id="escala" className="relative section-padding border-t border-line overflow-hidden scroll-mt-20">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="max-w-2xl mb-16 reveal">
-          <p className="eyebrow mb-4">Stack / dashboard</p>
-          <h2 className="font-display font-medium text-3xl md:text-4xl text-silver-100 leading-tight">
+        <div className="max-w-2xl section-heading reveal">
+          <p className="eyebrow mb-3">Stack / dashboard</p>
+          <h2 className="font-display font-medium text-3xl md:text-[2.35rem] text-silver-100 leading-tight">
             Tecnologías y experiencia que me permiten resolver proyectos reales.
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-6">
-          <div className="border border-line bg-surface/60 p-6 md:p-8 reveal">
-            <div className="mb-6 flex items-center justify-between">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-5">
+          <div className="border border-line bg-surface/60 p-5 md:p-7 reveal">
+            <div className="mb-5 flex items-center justify-between">
               <span className="eyebrow text-[8px]">Developer dashboard</span>
-              <span className="rounded-full border border-line px-2 py-1 text-[9px] uppercase tracking-[0.16em] text-ink-500">
+              <span className="rounded-full border border-military-500/30 bg-military-950/50 px-2 py-1 text-[9px] uppercase tracking-[0.16em] text-military-400">
                 online
               </span>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-3">
               {metrics.map((metric) => (
-                <div key={metric.label} className="border border-line bg-bg/70 p-4">
-                  <div className="font-display text-2xl text-silver-100">{metric.value}</div>
-                  <div className="mt-2 text-[10px] uppercase tracking-[0.18em] text-ink-500">
+                <div key={metric.label} className="border border-line bg-bg/70 p-3.5 md:p-4">
+                  <div className="font-display text-xl md:text-2xl text-silver-100">{metric.value}</div>
+                  <div className="mt-1.5 text-[10px] uppercase tracking-[0.18em] text-ink-500">
                     {metric.label}
                   </div>
                 </div>
@@ -43,22 +43,22 @@ export default function Scale() {
             </div>
           </div>
 
-          <div className="border border-line bg-surface/60 p-6 md:p-8 reveal">
-            <div className="mb-6">
+          <div className="border border-line bg-surface/60 p-5 md:p-7 reveal">
+            <div className="mb-5">
               <p className="eyebrow text-[8px]">Tech stack</p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               {Object.entries(stack).map(([group, items]) => (
                 <div key={group}>
-                  <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-ink-500">
+                  <p className="mb-2.5 text-[10px] uppercase tracking-[0.2em] text-ink-500">
                     {group}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {items.map((item) => (
                       <span
                         key={item}
-                        className="rounded-full border border-line px-3 py-2 text-[10px] uppercase tracking-[0.12em] text-ink-300"
+                        className="rounded-full border border-line px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] text-ink-300"
                       >
                         {item}
                       </span>

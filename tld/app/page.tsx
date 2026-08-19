@@ -8,10 +8,12 @@ import Process from "@/components/Process";
 import Pricing from "@/components/Pricing";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import RevealObserver from "@/components/RevealObserver";
 
 export default function Home() {
   return (
     <main className="bg-bg min-h-screen">
+      <RevealObserver />
       <Nav />
       <Hero />
       <Pillars />
