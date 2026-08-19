@@ -15,12 +15,20 @@ body {
   color: #ECEDE9;
 }
 
-/* Visible focus states, kept subtle but real */
-a:focus-visible,
-button:focus-visible {
-  outline: 1px solid #8AA05F;
-  outline-offset: 4px;
-  border-radius: 2px;
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -32,6 +40,19 @@ button:focus-visible {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Visible focus states, kept subtle but real */
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid #8AA05F;
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 .eyebrow {

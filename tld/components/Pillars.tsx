@@ -1,14 +1,14 @@
 const pillars = [
   {
-    title: "Producto con propósito",
-    body: "Combinamos estrategia, experiencia de usuario y tecnología para crear productos que resuelven problemas reales y generan crecimiento medible.",
+    title: "Entiendo el negocio",
+    body: "No trabajo solo sobre la interfaz: analizo necesidades, objetivos y procesos para definir la mejor solución digital para cada caso.",
     glyph: (
       <path d="M8 24 H40" stroke="currentColor" strokeWidth="2" />
     ),
   },
   {
-    title: "Arquitectura que escala",
-    body: "Diseñamos sistemas con claridad, seguridad y capacidad de evolución para que cada nueva funcionalidad no se convierta en deuda técnica.",
+    title: "Desarrollo completo",
+    body: "Puedo acompañar desde una landing hasta una aplicación web o sistema más complejo, con frontend y backend trabajando en conjunto.",
     glyph: (
       <path
         d="M14 34 L24 12 L34 34"
@@ -19,8 +19,8 @@ const pillars = [
     ),
   },
   {
-    title: "Operación de negocio",
-    body: "No entregamos solo código: conectamos infraestructura, métricas, integración y soporte para que el producto siga funcionando en producción.",
+    title: "Más que una web",
+    body: "La idea no es vender una página bonita: es crear una solución que ayude a resolver un problema real y a escalar el negocio.",
     glyph: (
       <circle cx="24" cy="24" r="12" stroke="currentColor" strokeWidth="2" />
     ),
@@ -31,10 +31,10 @@ export default function Pillars() {
   return (
     <section id="pilares" className="relative py-28 md:py-36 border-t border-line">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="max-w-2xl mb-16 md:mb-20">
-          <p className="eyebrow mb-4">Cómo trabajamos</p>
+        <div className="max-w-2xl mb-16 md:mb-20 reveal">
+          <p className="eyebrow mb-4">Diferencial</p>
           <h2 className="font-display font-medium text-3xl md:text-4xl text-silver-100 leading-tight">
-            Hacemos software que funciona para el negocio y para el usuario.
+            Más que una web. Entiendo el sistema detrás de tu negocio.
           </h2>
         </div>
 
@@ -42,7 +42,7 @@ export default function Pillars() {
           {pillars.map((p) => (
             <div
               key={p.title}
-              className="bg-bg p-8 md:p-10 flex flex-col gap-6 hover:bg-surface transition-colors"
+              className="bg-bg p-8 md:p-10 flex flex-col gap-6 hover:bg-surface transition-colors reveal"
             >
               <svg
                 viewBox="0 0 48 48"

@@ -7,41 +7,38 @@ export default function CTA() {
       <div className="absolute inset-0 bg-gradient-to-br from-military-950 via-bg to-bg" />
       <div className="absolute inset-0 blueprint-bg opacity-40" />
 
-      <div className="relative mx-auto max-w-4xl px-6 md:px-10 text-center">
-        <p className="eyebrow mb-6">Hablemos</p>
+      <div className="relative mx-auto max-w-4xl px-6 md:px-10 text-center reveal">
+        <p className="eyebrow mb-6">¿Tenés un proyecto en mente?</p>
         <h2 className="font-display font-medium text-3xl sm:text-4xl md:text-5xl text-silver-100 leading-tight mb-8">
-          ¿Tu próximo producto necesita más velocidad, claridad y escala?
+          Hablemos de cómo resolverlo con una solución digital que encaje con tu negocio.
         </h2>
         <p className="font-body text-ink-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Si estás lanzando un SaaS, optimizando una plataforma o modernizando un
-          proceso interno, te ayudamos a definir la mejor ruta técnica y de negocio.
+          Contame qué necesitás y te ayudo a definir la mejor solución: landing, sistema,
+          gestión, aplicación web o mejora de una herramienta existente.
         </p>
 
         <div className="flex flex-wrap justify-center gap-2 mb-10 text-[10px] uppercase tracking-[0.2em] text-ink-500">
-          <span className="border border-line px-3 py-2">Product strategy</span>
-          <span className="border border-line px-3 py-2">Full-stack</span>
-          <span className="border border-line px-3 py-2">Cloud architecture</span>
-          <span className="border border-line px-3 py-2">Integration</span>
+          <span className="border border-line px-3 py-2">Hablemos</span>
+          <span className="border border-line px-3 py-2">Quiero mi web</span>
+          <span className="border border-line px-3 py-2">Contame tu idea</span>
         </div>
 
-        <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-          <label htmlFor="email" className="sr-only">
-            Correo electrónico
-          </label>
-          <input
-            id="email"
-            type="email"
-            required
-            placeholder="tu@empresa.com"
-            className="flex-1 bg-surface border border-line-strong px-5 py-3.5 text-sm text-ink-100 placeholder:text-ink-600 focus:outline-none focus:border-military-500 transition-colors"
-          />
-          <button
-            type="submit"
-            className="bg-military-700 text-silver-100 px-7 py-3.5 text-sm font-body hover:bg-military-600 transition-colors shrink-0"
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <a
+            href="mailto:calebtoledo375@gmail.com?subject=Hablemos%20de%20mi%20proyecto"
+            className="inline-flex items-center gap-2 bg-military-700 text-silver-100 px-7 py-3.5 text-sm font-body hover:bg-military-600 transition-colors"
           >
-            Enviar
-          </button>
-        </form>
+            Empezar proyecto
+          </a>
+          <a
+            href="https://wa.me/5493515597512"
+            rel="noreferrer"
+            target="_blank"
+            className="inline-flex items-center gap-2 border border-line-strong text-ink-100 px-7 py-3.5 text-sm hover:border-silver-500 transition-colors"
+          >
+            WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   );
