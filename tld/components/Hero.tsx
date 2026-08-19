@@ -79,11 +79,11 @@ export default function Hero() {
           <div className="absolute inset-0 rounded-[28px] border border-line bg-surface/50 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
             <div className="flex h-full flex-col justify-between rounded-[24px] border border-line bg-bg/70 p-6">
               <div className="flex items-center justify-between">
-                <div className="h-10 w-10 overflow-hidden rounded-full border border-line bg-surface">
+                <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-transparent">
                   <img
-                    src="/tldlogo.jpg"
+                    src="/logotld.png"
                     alt="Logo Caleb Toledo"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain bg-transparent"
                   />
                 </div>
                 <span className="rounded-full border border-line px-2 py-1 text-[10px] uppercase tracking-[0.2em] text-ink-400">
