@@ -25,10 +25,9 @@ const contactMethods = [
   },
   {
     label: "Instagram",
-    value: "Instagram (placeholder)",
-    href: "#",
-    external: false,
-    placeholder: true,
+    value: "@calebtld.dev",
+    href: "https://www.instagram.com/calebtld.dev/",
+    external: true,
   },
 ];
 
@@ -60,12 +59,8 @@ export default function CTA() {
                 href={item.href}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noreferrer" : undefined}
-                aria-label={item.placeholder ? `${item.label} placeholder` : item.label}
-                className={`group rounded-xl border px-4 py-4 transition-colors ${
-                  item.placeholder
-                    ? "border-dashed border-line bg-surface/30 text-ink-500"
-                    : "border-line bg-surface/60 text-ink-100 hover:border-military-500 hover:bg-surface"
-                }`}
+                aria-label={item.label}
+                className="group rounded-xl border border-line bg-surface/60 px-4 py-4 text-ink-100 transition-colors hover:border-military-500 hover:bg-surface"
               >
                 <div className="text-[10px] uppercase tracking-[0.2em] text-ink-500 mb-2">
                   {item.label}
