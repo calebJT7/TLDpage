@@ -81,7 +81,7 @@ export default function Hero() {
               <div className="flex items-center justify-between">
                 <div className="h-10 w-10 overflow-hidden rounded-full border border-line bg-surface">
                   <img
-                    src="/Gemini_Generated_Image_jr31vojr31vojr31.jpg"
+                    src="/tldlogo.jpg"
                     alt="Logo Caleb Toledo"
                     className="h-full w-full object-cover"
                   />

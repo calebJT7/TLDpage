@@ -36,7 +36,7 @@ const projects = [
       "Espacio personal para mostrar proyectos, capacidades y trabajo realizado con una identidad visual más sólida.",
     status: "Personal",
     tags: ["Portfolio", "Branding", "Web"],
-    image: "/Gemini_Generated_Image_jr31vojr31vojr31.jpg",
+    image: "/tldlogo.jpg",
     link: "https://calebjt7.github.io/portafolio/",
   },
 ];

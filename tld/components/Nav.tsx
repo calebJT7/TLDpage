@@ -5,7 +5,7 @@ export default function Nav() {
         <a href="#top" className="flex items-center gap-3 leading-none group">
           <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-line bg-surface">
             <img
-              src="/Gemini_Generated_Image_jr31vojr31vojr31.jpg"
+              src="/tldlogo.jpg"
               alt="Logo Caleb Toledo"
               className="h-full w-full object-cover"
             />
