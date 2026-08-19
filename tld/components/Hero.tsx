@@ -43,18 +43,18 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="mailto:calebtoledo375@gmail.com?subject=Hablemos%20de%20mi%20proyecto"
-              className="inline-flex items-center gap-2 bg-military-700 text-silver-100 px-7 py-3.5 text-sm font-body hover:bg-military-600 transition-colors"
+              href="#proyectos"
+              className="inline-flex items-center gap-2 border border-line-strong text-ink-100 px-7 py-3.5 text-sm font-body hover:border-silver-500 transition-colors"
             >
-              Hablemos
+              Ver proyectos
             </a>
             <a
               href="https://calebjt7.github.io/portafolio/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 border border-line-strong text-ink-100 px-7 py-3.5 text-sm font-body hover:border-silver-500 transition-colors"
+              className="inline-flex items-center gap-2 text-ink-400 px-1 py-3 text-sm font-body hover:text-silver-100 transition-colors"
             >
-              Quiero mi web
+              Portfolio
             </a>
           </div>
 

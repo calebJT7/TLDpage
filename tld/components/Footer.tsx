@@ -23,10 +23,10 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/caleb-toledo-356b56336/" target="_blank" rel="noreferrer" className="hover:text-silver-100 transition-colors">
             LinkedIn
           </a>
-          <a href="mailto:calebtoledo375@gmail.com" className="hover:text-silver-100 transition-colors">
+          <a href="mailto:calebtoledo375@gmail.com?subject=Hablemos%20de%20mi%20proyecto" className="hover:text-silver-100 transition-colors">
             Email
           </a>
-          <a href="https://wa.me/5493515597512" target="_blank" rel="noreferrer" className="hover:text-silver-100 transition-colors">
+          <a href="https://wa.me/5493515597512?text=Hola%20Caleb%2C%20quiero%20hablar%20de%20un%20proyecto." target="_blank" rel="noreferrer" className="hover:text-silver-100 transition-colors">
             WhatsApp
           </a>
         </div>

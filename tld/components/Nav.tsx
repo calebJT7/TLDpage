@@ -31,10 +31,10 @@ export default function Nav() {
         </nav>
 
         <a
-          href="mailto:calebtoledo375@gmail.com?subject=Hablemos%20de%20mi%20proyecto"
-          className="hidden sm:inline-flex items-center gap-2 border border-military-700 text-ink-100 text-sm px-5 py-2.5 hover:bg-military-800 hover:border-military-600 transition-colors font-body"
+          href="#contacto"
+          className="hidden sm:inline-flex items-center gap-2 bg-military-700 text-silver-100 text-sm px-5 py-2.5 hover:bg-military-600 transition-colors font-body shadow-[0_0_0_1px_rgba(138,160,95,0.35)]"
         >
-          Empezar proyecto
+          Hablemos
         </a>
       </div>
     </header>
